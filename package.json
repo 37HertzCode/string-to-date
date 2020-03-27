@@ -1,5 +1,5 @@
 {
-  "name": "@hertz/string-to-date",
+  "name": "@37hertz/string-to-date",
   "version": "1.0.0",
   "description": "parse text like 'today', 'tomorrow', '+3days' into a javascript Date",
   "main": "dist/index.js",
