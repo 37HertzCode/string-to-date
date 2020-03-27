@@ -1,0 +1,50 @@
+{
+  "name": "@hertz/string-to-date",
+  "version": "1.0.0",
+  "description": "parse text like 'today', 'tomorrow', '+3days' into a javascript Date",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "mocha --require ts-node/register --require @babel/register tests/*.test.js",
+    "test:dev": "mocha --bail --require ts-node/register --require @babel/register tests/*.test.js",
+    "coverage": "nyc mocha --require ts-node/register --require @babel/register tests/*.test.js",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/37HertzCode/string-to-date"
+  },
+  "author": "Tim Kirbach <coder@37hertz.com>",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "@babel/register": "^7.5.5",
+    "@istanbuljs/nyc-config-babel": "^2.1.1",
+    "babel-plugin-istanbul": "^5.2.0",
+    "chai": "^4.2.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^6.2.0",
+    "nyc": "^14.1.1",
+    "sinon": "^9.0.1",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.8.3"
+  },
+  "nyc": {
+    "reporter": [
+      "text-summary",
+      "html"
+    ],
+    "require": [
+      "@babel/register",
+      "ts-node/register"
+    ],
+    "extension": [
+      ".js",
+      ".ts"
+    ],
+    "cache": true,
+    "temp-dir": "./.nyc-temp",
+    "report-dir": "./tests/report"
+  }
+}
